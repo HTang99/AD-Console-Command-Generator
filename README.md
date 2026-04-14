@@ -3,22 +3,6 @@
 - This is a small local Python project for building a custom Ability Draft console command with a clickable hero UI.
 - This project is mostly coded by Chatgpt, prompted by FrEEz1ng.
 
-## What it does
-
-- Enables cheats
-- Clears the old custom AD setup
-- Lets you choose the three draft timers in the UI
-  - `pre time - the time before the very first pick`
-  - `per player time - the time you have for each pick`
-  - `pre round time - the waiting time between each pick`
-- Lets you select up to 12 heroes by clicking
-- Fills heroes in order: first 5 to Radiant, next 5 to Dire
-- Clicking a selected hero again will unselect it
-- Shows the main setup command and a separate clear-setup command
-- Lets you copy either command
-- Keeps icon loading offline for fast startup
-- Shows an updater hero-count health check in the app
-
 ## Files (The ones you run)
 
 - `AD_console_command_generator.pyw` : the main app.
@@ -46,13 +30,26 @@ python update_assets.py
 - You can customized the timers on top right of the app.
 - You can pick heros from the buttons on the left. The search bar can handle name and most (hopefully) alias of the heros.
 - After timers and heros are set, copy the command and run it in the console in game.
-- Create your locally hosted AD game with NO BOTS, and start your game. (If you want to preserve the order you see in this app and be the first player to pick, also disable player shuffling)
+- Create your *LOCALLY HOSTED AD game with NO BOTS*, and start your game (If you want to preserve the order you see in this app and be the first player to pick, also disable player shuffling).
 - Use the clear AD setup command to reset everything after your testing is over.
+
+## What it does
+
+- Enables cheats.
+- Clears the old custom AD setup.
+- Lets you choose the three draft timers in the UI.
+  - `pre time - the time before the very first pick`
+  - `per player time - the time you have for each pick`
+  - `pre round time - the waiting time between each pick`
+- Lets you select up to 12 heroes by clicking.
+- Fills heroes in order: first 5 to Radiant, next 5 to Dire, last 2 to extra. These (at most) 12 heros forms the pool. If you pick less than 12 heros the remaining spot will be filled by random, just like usual AD games.
+- Clicking a selected hero again will unselect it.
+- Shows the main setup command and a separate clear-setup command.
 
 ## Notes
 
 - The main app does not download icons at startup. It does try to verify if the local hero count matches the offical count online.
-- The updater is the one that downloads stuff, mostly icons. If in the future new heros are released this *should (but obviously not tested)* be able to download their name as well as their icon.
+- The updater is the one that downloads stuff, mostly icons. If in the future new heros are released this *should (but obviously not tested)* be able to download their name as well as their icon..
 
 ## License
 
