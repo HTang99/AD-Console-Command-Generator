@@ -7,9 +7,9 @@ from pathlib import Path
 from typing import Dict, Iterable, List, Tuple
 
 DEFAULT_TIMERS = {
-    "pre_time": 10,
-    "per_player_time": 1,
-    "pre_round_time": 2,
+    "pre_time": 5,
+    "per_player_time": 2,
+    "pre_round_time": 1,
 }
 
 CLEAR_AD_COMMAND = "dota_gamemode_ability_draft_set_draft_hero_and_team_clear;"

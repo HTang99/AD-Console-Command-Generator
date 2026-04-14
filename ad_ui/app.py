@@ -24,9 +24,13 @@ UPDATE_STATUS_PATH = PROJECT_ROOT / "cache" / "update_status.json"
 
 
 class AbilityDraftApp:
-    def __init__(self, root: tk.Tk):
+    def __init__(self, root: tk.Tk, version: str = ""):
         self.root = root
-        self.root.title("Dota 2 Ability Draft Command Builder")
+        self.version = version.strip()
+        title = "Dota 2 Ability Draft Command Builder"
+        if self.version:
+            title += f" v{self.version}"
+        self.root.title(title)
         self.root.geometry("1260x860")
         self.root.minsize(1080, 740)
 
@@ -86,6 +90,7 @@ class AbilityDraftApp:
         ttk.Spinbox(timer_frame, from_=0, to=999, width=8, textvariable=self.pre_round_var).grid(row=1, column=2, padx=4, pady=(2, 0))
 
         ttk.Label(top, textvariable=self.status_var).grid(row=1, column=0, columnspan=3, sticky="w", pady=(8, 0))
+
 
         left = ttk.Frame(self.root, padding=(10, 0, 10, 10))
         left.grid(row=1, column=0, sticky="nsew")
@@ -513,7 +518,7 @@ def _set_app_icon(root: tk.Tk) -> None:
         pass
 
 
-def main() -> None:
+def main(version: str = "") -> None:
     _set_windows_app_id()
     root = tk.Tk()
     _set_app_icon(root)
@@ -523,5 +528,5 @@ def main() -> None:
             style.theme_use("vista")
     except tk.TclError:
         pass
-    app = AbilityDraftApp(root)
+    app = AbilityDraftApp(root, version=version)
     root.mainloop()
