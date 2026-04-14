@@ -41,13 +41,18 @@ Run the asset updater once so the UI has local icons and updater status:
 python update_assets.py
 ```
 
+## How to use
+
+- You can customized the timers on top right of the app.
+- You can pick heros from the buttons on the left. The search bar can handle name and most (hopefully) alias of the heros.
+- After timers and heros are set, copy the command and run it in the console in game.
+- Create your locally hosted AD game with NO BOTS, and start your game. (If you want to preserve the order you see in this app and be the first player to pick, also disable player shuffling)
+- Use the clear AD setup command to reset everything after your testing is over.
+
 ## Notes
 
-- The main app does not download icons at startup.
-- The updater stores one canonical icon file per hero and uses `cache/icons/aliases.json` so aliases such as `wraithking` and `skeleton_king` share the same local image.
-- Search now ranks strong prefix matches highest while ignoring case, spaces, underscores, and symbols.
-- If the hero-count check is red, rerun `update_assets.py`.
-
+- The main app does not download icons at startup. It does try to verify if the local hero count matches the offical count online.
+- The updater is the one that downloads stuff, mostly icons. If in the future new heros are released this *should (but obviously not tested)* be able to download their name as well as their icon.
 
 ## License
 
