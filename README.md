@@ -8,9 +8,9 @@
 - Enables cheats
 - Clears the old custom AD setup
 - Lets you choose the three draft timers in the UI
-  - `pre time`
-  - `per player time`
-  - `pre round time`
+  - `pre time - the time before the very first pick`
+  - `per player time - the time you have for each pick`
+  - `pre round time - the waiting time between each pick`
 - Lets you select up to 10 heroes by clicking
 - Fills heroes in order: first 5 to Radiant, next 5 to Dire
 - Clicking a selected hero again will unselect it
@@ -19,10 +19,13 @@
 - Keeps icon loading offline for fast startup
 - Shows an updater hero-count health check in the app
 
-## Files
+## Files (The ones you run)
 
 - `AD_console_command_generator.pyw` : the main app.
 - `update_assets.py` : refresh hero names from Valve's official Dota 2 datafeed and download icons for offline use. Run this with python.
+
+## Files (Other files)
+
 - `hero_data.json` : display names, internal command names, aliases, and optional official site slugs
 - `ad_ui/logic.py` : matching, ranking, and command generation
 - `ad_ui/icons.py` : local icon loader (offline only)
