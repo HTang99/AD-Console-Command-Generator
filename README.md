@@ -1,6 +1,7 @@
 # Dota 2 Ability Draft Console Command Generator
 
-This is a small local Python project for building a custom Ability Draft console command with a clickable hero UI.
+- This is a small local Python project for building a custom Ability Draft console command with a clickable hero UI.
+- This project is mostly coded by Chatgpt, prompted by FrEEz1ng.
 
 ## What it does
 
@@ -44,6 +45,11 @@ python update_assets.py
 - Search now ranks strong prefix matches highest while ignoring case, spaces, underscores, and symbols.
 - If the hero-count check is red, rerun `update_assets.py`.
 
-##
 
-- This project is mostly coded by Chatgpt, prompted by FrEEz1ng.
+## License
+
+This project is licensed under the MIT License.
+
+You are free to use, modify, and distribute this software in accordance with the terms of the MIT License. See the [LICENSE](LICENSE) file for the full license text.
+
+Dota 2, hero names, and related game assets are the property of Valve. This repository only licenses the original code in this project under MIT, and does not claim ownership of third-party game content.
