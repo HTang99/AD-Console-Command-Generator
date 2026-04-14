@@ -11,7 +11,7 @@
   - `pre time - the time before the very first pick`
   - `per player time - the time you have for each pick`
   - `pre round time - the waiting time between each pick`
-- Lets you select up to 10 heroes by clicking
+- Lets you select up to 12 heroes by clicking
 - Fills heroes in order: first 5 to Radiant, next 5 to Dire
 - Clicking a selected hero again will unselect it
 - Shows the main setup command and a separate clear-setup command
